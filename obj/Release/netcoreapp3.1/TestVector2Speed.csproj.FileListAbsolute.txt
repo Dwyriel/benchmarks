@@ -1,0 +1,13 @@
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\bin\Release\netcoreapp3.1\TestVector2Speed.exe
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\bin\Release\netcoreapp3.1\TestVector2Speed.deps.json
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\bin\Release\netcoreapp3.1\TestVector2Speed.runtimeconfig.json
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\bin\Release\netcoreapp3.1\TestVector2Speed.runtimeconfig.dev.json
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\bin\Release\netcoreapp3.1\TestVector2Speed.dll
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\bin\Release\netcoreapp3.1\TestVector2Speed.pdb
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.AssemblyInfoInputs.cache
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.AssemblyInfo.cs
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.csproj.CoreCompileInputs.cache
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.dll
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.pdb
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.genruntimeconfig.cache
+C:\Users\RFgam\Desktop\RandomCode\TestVector2Speed\TestVector2Speed\obj\Release\netcoreapp3.1\TestVector2Speed.csprojAssemblyReference.cache
