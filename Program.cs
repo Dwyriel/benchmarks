@@ -7,6 +7,25 @@ namespace TestVector2Speed
 {
     class Program
     {
+        public static Vector2 Benchtest1(float signedAngle)
+        {
+            return (signedAngle > 0) ? (Math.Abs(signedAngle) < 22.5f) ? Vector2.up : (Math.Abs(signedAngle) < 67.5f) ? new Vector2(-.7f, .7f) : (Math.Abs(signedAngle) < 112.5f) ? Vector2.left : (Math.Abs(signedAngle) < 157.5f) ? new Vector2(-.7f, -.7f) : Vector2.down : (Math.Abs(signedAngle) < 22.5f) ? Vector2.up : (Math.Abs(signedAngle) < 67.5f) ? new Vector2(.7f, .7f) : (Math.Abs(signedAngle) < 112.5f) ? Vector2.right : (Math.Abs(signedAngle) < 157.5f) ? new Vector2(.7f, -.7f) : Vector2.down;
+        }
+
+        public static Vector2 Benchtest2(float signedAngle)
+        {
+            Vector2 instPlace;
+            if (Math.Abs(signedAngle) > 22.5f && Math.Abs(signedAngle) < 67.5f)
+                instPlace = (signedAngle > 0) ? new Vector2(-.7f, .7f) : new Vector2(.7f, .7f);
+            else if (Math.Abs(signedAngle) > 67.5f && Math.Abs(signedAngle) < 112.5f)
+                instPlace = (signedAngle > 0) ? Vector2.left : Vector2.right;
+            else if (Math.Abs(signedAngle) > 112.5f && Math.Abs(signedAngle) < 157.5f)
+                instPlace = (signedAngle > 0) ? new Vector2(-.7f, -.7f) : new Vector2(.7f, -.7f);
+            else
+                instPlace = (Math.Abs(signedAngle) > 90) ? Vector2.down : Vector2.up;
+            return instPlace;
+        }
+
         static void Main(string[] args)
         {
             Stopwatch s = new Stopwatch();
@@ -32,7 +51,7 @@ namespace TestVector2Speed
                 s.Restart();
                 for (BigInteger b = 0; b < iterationsPerTest; b++)
                 {
-                    instPlace = (signedAngle > 0) ? (Math.Abs(signedAngle) < 22.5f) ? Vector2.up : (Math.Abs(signedAngle) < 67.5f) ? new Vector2(-.7f, .7f) : (Math.Abs(signedAngle) < 112.5f) ? Vector2.left : (Math.Abs(signedAngle) < 157.5f) ? new Vector2(-.7f, -.7f) : Vector2.down : (Math.Abs(signedAngle) < 22.5f) ? Vector2.up : (Math.Abs(signedAngle) < 67.5f) ? new Vector2(.7f, .7f) : (Math.Abs(signedAngle) < 112.5f) ? Vector2.right : (Math.Abs(signedAngle) < 157.5f) ? new Vector2(.7f, -.7f) : Vector2.down;
+                    instPlace = Benchtest1(signedAngle);
                     totalIterations++;
                 }
                 s.Stop();
@@ -41,14 +60,7 @@ namespace TestVector2Speed
                 s.Restart();
                 for (BigInteger a = 0; a < iterationsPerTest; a++)
                 {
-                    if (Math.Abs(signedAngle) > 22.5f && Math.Abs(signedAngle) < 67.5f)
-                        instPlace = (signedAngle > 0) ? new Vector2(-.7f, .7f) : new Vector2(.7f, .7f);
-                    else if (Math.Abs(signedAngle) > 67.5f && Math.Abs(signedAngle) < 112.5f)
-                        instPlace = (signedAngle > 0) ? Vector2.left : Vector2.right;
-                    else if (Math.Abs(signedAngle) > 112.5f && Math.Abs(signedAngle) < 157.5f)
-                        instPlace = (signedAngle > 0) ? new Vector2(-.7f, -.7f) : new Vector2(.7f, -.7f);
-                    else
-                        instPlace = (Math.Abs(signedAngle) > 90) ? Vector2.down : Vector2.up;
+                    instPlace = Benchtest2(signedAngle);
                     totalIterations++;
                 }
                 s.Stop();
@@ -68,14 +80,7 @@ namespace TestVector2Speed
                 s.Restart();
                 for (BigInteger b = 0; b < iterationsPerTest; b++)
                 {
-                    if (Math.Abs(signedAngle) > 22.5f && Math.Abs(signedAngle) < 67.5f)
-                        instPlace = (signedAngle > 0) ? new Vector2(-.7f, .7f) : new Vector2(.7f, .7f);
-                    else if (Math.Abs(signedAngle) > 67.5f && Math.Abs(signedAngle) < 112.5f)
-                        instPlace = (signedAngle > 0) ? Vector2.left : Vector2.right;
-                    else if (Math.Abs(signedAngle) > 112.5f && Math.Abs(signedAngle) < 157.5f)
-                        instPlace = (signedAngle > 0) ? new Vector2(-.7f, -.7f) : new Vector2(.7f, -.7f);
-                    else
-                        instPlace = (Math.Abs(signedAngle) > 90) ? Vector2.down : Vector2.up;
+                    instPlace = Benchtest2(signedAngle);
                     totalIterations++;
                 }
                 s.Stop();
@@ -84,7 +89,7 @@ namespace TestVector2Speed
                 s.Restart();
                 for (BigInteger a = 0; a < iterationsPerTest; a++)
                 {
-                    instPlace = (signedAngle > 0) ? (Math.Abs(signedAngle) < 22.5f) ? Vector2.up : (Math.Abs(signedAngle) < 67.5f) ? new Vector2(-.7f, .7f) : (Math.Abs(signedAngle) < 112.5f) ? Vector2.left : (Math.Abs(signedAngle) < 157.5f) ? new Vector2(-.7f, -.7f) : Vector2.down : (Math.Abs(signedAngle) < 22.5f) ? Vector2.up : (Math.Abs(signedAngle) < 67.5f) ? new Vector2(.7f, .7f) : (Math.Abs(signedAngle) < 112.5f) ? Vector2.right : (Math.Abs(signedAngle) < 157.5f) ? new Vector2(.7f, -.7f) : Vector2.down;
+                    instPlace = Benchtest1(signedAngle);
                     totalIterations++;
                 }
                 s.Stop();
