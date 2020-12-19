@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AF2OYTJV0aTplbD0wOQIbzGp+Jr7h7BfAsHl9fF1WYzW8udEqvlIPaBsC+OPPg7kvHyqf68mDI6kqvWwtntSzg==",
+  "dgSpecHash": "0Ee8JDqXlUfmtHKf8mO91Z58xVCjNm8Nb1iZZsBXwAEubIdebVwIYnv5FeHCVsXk5sMlYeMX7QQwwH84NpmWgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\TestVector2Speed\\TestVector2Speed\\TestVector2Speed.csproj",
+  "projectFilePath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\TestVector2Speed.csproj": {}
+    "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\TestVector2Speed.csproj": {
+    "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\TestVector2Speed.csproj",
-        "projectName": "TestVector2Speed",
-        "projectPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\TestVector2Speed.csproj",
+        "projectUniqueName": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
+        "projectName": "Benchmarks",
+        "projectPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
         "packagesPath": "C:\\Users\\RFgam\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\obj\\",
         "projectStyle": "PackageReference",

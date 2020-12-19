@@ -1,0 +1,13 @@
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\bin\Debug\netcoreapp3.1\Benchmarks.exe
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\bin\Debug\netcoreapp3.1\Benchmarks.deps.json
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\bin\Debug\netcoreapp3.1\Benchmarks.runtimeconfig.json
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\bin\Debug\netcoreapp3.1\Benchmarks.runtimeconfig.dev.json
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\bin\Debug\netcoreapp3.1\Benchmarks.dll
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\bin\Debug\netcoreapp3.1\Benchmarks.pdb
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.csprojAssemblyReference.cache
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.AssemblyInfoInputs.cache
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.AssemblyInfo.cs
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.csproj.CoreCompileInputs.cache
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.dll
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.pdb
+C:\Users\RFgam\Desktop\RandomCode\ternary-ifelse-benchmark-vector2\obj\Debug\netcoreapp3.1\Benchmarks.genruntimeconfig.cache

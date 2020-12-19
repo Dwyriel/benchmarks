@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RFgam\\Desktop\\RandomCode\\TestVector2Speed\\TestVector2Speed\\TestVector2Speed.csproj",
-      "projectName": "TestVector2Speed",
-      "projectPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\TestVector2Speed\\TestVector2Speed\\TestVector2Speed.csproj",
+      "projectUniqueName": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
+      "projectName": "Benchmarks",
+      "projectPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
       "packagesPath": "C:\\Users\\RFgam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\TestVector2Speed\\TestVector2Speed\\obj\\",
+      "outputPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -37,6 +37,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -48,6 +49,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -63,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
