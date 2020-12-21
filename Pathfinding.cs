@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Numerics;
-using System.Text;
 using System.Threading;
 
 namespace Benchmarks
@@ -24,17 +23,18 @@ namespace Benchmarks
                 threadCount = (int)iterations;
             BigInteger iterationsPerThread = iterations / threadCount;
             sw.Start();
+            List<int> counting = new List<int>();
             for (int tCount = 0; tCount < threadCount; tCount++)
             {
                 Thread newThread = new Thread(() =>
                 {
+                    Console.WriteLine(Thread.CurrentThread.Name + " starting");
                     NodeManager nM = new NodeManager();
                     nM.CreatMaps();
                     BigInteger totalThreadTime = 0;
-                    BigInteger i = 0;
-                    while (i < iterationsPerThread)
+                    while (counting.Count < iterations)
                     {
-                        i++;
+                        counting.Add(1);
                         BigInteger iterationTime = 0;
                         Stopwatch s = new Stopwatch();
                         Stopwatch s2 = new Stopwatch();
@@ -67,6 +67,7 @@ namespace Benchmarks
                     }
                     Console.WriteLine("Total thread time: " + totalThreadTime);
                 });
+                newThread.Name = "Thread - " + tCount;
                 threads.Add(newThread);
                 newThread.Start();
             }
@@ -76,29 +77,25 @@ namespace Benchmarks
             }
             sw.Stop();
             totalTime = sw.ElapsedMilliseconds;
-            BigInteger totalmap = 0, count = 0;
+            BigInteger totalmap = 0;
             foreach (BigInteger value in firstMap)
             {
-                count++;
                 totalmap += value;
             }
-            Console.WriteLine("Avarage time on first map: " + totalmap / count);
-            totalmap = 0; count = 0;
+            Console.WriteLine("Avarage time on first map: " + totalmap / firstMap.Count);
+            totalmap = 0;
             foreach (BigInteger value in secondMap)
             {
-                count++;
                 totalmap += value;
             }
-            Console.WriteLine("Avarage time on second map: " + totalmap / count);
-            totalmap = 0; count = 0;
+            Console.WriteLine("Avarage time on second map: " + totalmap / secondMap.Count);
+            totalmap = 0;
             foreach (BigInteger value in thirdMap)
             {
-                count++;
                 totalmap += value;
             }
-            Console.WriteLine("Avarage time on third map: " + totalmap / count);
+            Console.WriteLine("Avarage time on third map: " + totalmap / thirdMap.Count);
             Console.WriteLine("Total benchmark time: " + totalTime);
-            Console.ReadLine();
         }
     }
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Numerics;
-using System.Text;
 using System.Threading;
 
 namespace Benchmarks
@@ -30,7 +29,7 @@ namespace Benchmarks
 
         public override string ToString()
         {
-            return "{x:" + x + " y:" + y +"}";
+            return "{x:" + x + " y:" + y + "}";
         }
 
         public override int GetHashCode()
@@ -89,19 +88,19 @@ namespace Benchmarks
             Console.WriteLine("Press enter to start");
             Console.ReadLine();
             BigInteger totalIterations = 0;
-            BigInteger iterationsPerThread = iterations / threadCount;
-            Console.WriteLine("iterations = " + iterations + " iterations per thread = " + iterationsPerThread);
+            Console.WriteLine("Iterations = " + iterations + " Threads = " + threadCount);
+            List<int> counting = new List<int>();
             for (int count = 0; count < threadCount; count++)
             {
                 Thread newThread = new Thread(() =>
                 {
-                    Thread.Sleep(1000);
+                    Console.WriteLine(Thread.CurrentThread.Name + " starting");
+                    Thread.Sleep(1500);
                     Stopwatch s = new Stopwatch();
-                    BigInteger i = 0;
                     int totalThreadIterations = 0;
-                    while (i < iterationsPerThread)
+                    while (counting.Count < iterations)
                     {
-                        i++;
+                        counting.Add(1);
                         signedAngle = ((float)rng.NextDouble() * 360f) - 180f;
                         Console.WriteLine("Angle: " + signedAngle);
                         s.Restart();
@@ -127,10 +126,9 @@ namespace Benchmarks
                     Console.WriteLine("Inverting");
                     Console.WriteLine();
                     Thread.Sleep(1000);
-                    i = 0;
-                    while (i < iterationsPerThread)
+                    while (counting.Count < iterations*2)
                     {
-                        i++;
+                        counting.Add(1);
                         signedAngle = ((float)rng.NextDouble() * 360f) - 180f;
                         Console.WriteLine("Angle: " + signedAngle);
                         s.Restart();
@@ -177,7 +175,6 @@ namespace Benchmarks
             }
             Console.WriteLine("Ifelse avg = " + (total / ifelse.Count));
             Console.WriteLine("total iterations = " + totalIterations);
-            Console.ReadLine();
         }
     }
 

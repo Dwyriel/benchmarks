@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using Benchmarks;
 
 namespace MainProgram
@@ -46,6 +44,7 @@ namespace MainProgram
                 default:
                     return;
             }
+            Console.ReadLine();
         }
     }
 }
