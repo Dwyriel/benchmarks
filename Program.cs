@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Benchmarks;
 
-namespace TestVector2Speed
+namespace MainProgram
 {
     class Program
     {

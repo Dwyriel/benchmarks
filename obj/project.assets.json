@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
+      "projectUniqueName": "C:\\Users\\RFgam\\Desktop\\RandomCode\\benchmarks\\Benchmarks.csproj",
       "projectName": "Benchmarks",
-      "projectPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\Benchmarks.csproj",
+      "projectPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\benchmarks\\Benchmarks.csproj",
       "packagesPath": "C:\\Users\\RFgam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\ternary-ifelse-benchmark-vector2\\obj\\",
+      "outputPath": "C:\\Users\\RFgam\\Desktop\\RandomCode\\benchmarks\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
