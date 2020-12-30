@@ -21,7 +21,6 @@ namespace Benchmarks
             Console.ReadLine();
             if (iterations < threadCount && iterations > 0)
                 threadCount = (int)iterations;
-            BigInteger iterationsPerThread = iterations / threadCount;
             sw.Start();
             List<int> counting = new List<int>();
             for (int tCount = 0; tCount < threadCount; tCount++)
