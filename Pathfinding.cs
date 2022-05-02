@@ -17,17 +17,18 @@ namespace Benchmarks
             List<Thread> threads = new List<Thread>();
             Console.WriteLine("How many iterations? (int)");
             BigInteger iterations = BigInteger.Parse(Console.ReadLine());
+            if(iterations <= 0)
+                return;
             Console.WriteLine("Press enter to start");
             Console.ReadLine();
-            if (iterations < threadCount && iterations > 0)
-                threadCount = (int)iterations;
+            threadCount = (iterations < threadCount && iterations > 0) ? (int)iterations : threadCount;
             sw.Start();
             List<int> counting = new List<int>();
             for (int tCount = 0; tCount < threadCount; tCount++)
             {
                 Thread newThread = new Thread(() =>
                 {
-                    Console.WriteLine(Thread.CurrentThread.Name + " starting");
+                    Console.WriteLine(Thread.CurrentThread.Name + " - Starting");
                     NodeManager nM = new NodeManager();
                     nM.CreatMaps();
                     BigInteger totalThreadTime = 0;
@@ -44,14 +45,14 @@ namespace Benchmarks
                         Stack<Node> path = AStar.Pathfinding(startPos, endPos, nM.Maps[0]);
                         s2.Stop();
                         firstMap.Add(s2.ElapsedMilliseconds);
-                        Console.WriteLine("First map done\n");
+                        Console.WriteLine(Thread.CurrentThread.Name + " - First map done\n");
                         s2.Restart();
                         startPos = new Vector2(20, 140);
                         endPos = new Vector2(180, 140);
                         path = AStar.Pathfinding(startPos, endPos, nM.Maps[1]);
                         s2.Stop();
                         secondMap.Add(s2.ElapsedMilliseconds);
-                        Console.WriteLine("Second map done\n");
+                        Console.WriteLine(Thread.CurrentThread.Name + " - Second map done\n");
                         s2.Restart();
                         startPos = new Vector2(10, 145);
                         endPos = new Vector2(115, 80);
@@ -59,40 +60,33 @@ namespace Benchmarks
                         s.Stop();
                         s2.Stop();
                         thirdMap.Add(s2.ElapsedMilliseconds);
-                        Console.WriteLine("Third map done\n");
+                        Console.WriteLine(Thread.CurrentThread.Name + " - Third map done\n");
                         iterationTime = s.ElapsedMilliseconds;
                         totalThreadTime += iterationTime;
-                        Console.WriteLine("Total iteration time: " + s.ElapsedMilliseconds + "\n");
+                        Console.WriteLine(Thread.CurrentThread.Name + " - Total iteration time: " + s.ElapsedMilliseconds + "\n");
                     }
-                    Console.WriteLine("Total thread time: " + totalThreadTime);
+                    Console.WriteLine(Thread.CurrentThread.Name + " - Total thread time: " + totalThreadTime);
                 });
-                newThread.Name = "Thread - " + tCount;
+                newThread.Name = "Thread " + tCount;
                 threads.Add(newThread);
-                newThread.Start();
             }
             foreach (Thread thread in threads)
-            {
+                thread.Start();
+            foreach (Thread thread in threads)
                 thread.Join();
-            }
             sw.Stop();
             totalTime = sw.ElapsedMilliseconds;
             BigInteger totalmap = 0;
             foreach (BigInteger value in firstMap)
-            {
                 totalmap += value;
-            }
             Console.WriteLine("Avarage time on first map: " + totalmap / firstMap.Count);
             totalmap = 0;
             foreach (BigInteger value in secondMap)
-            {
                 totalmap += value;
-            }
             Console.WriteLine("Avarage time on second map: " + totalmap / secondMap.Count);
             totalmap = 0;
             foreach (BigInteger value in thirdMap)
-            {
                 totalmap += value;
-            }
             Console.WriteLine("Avarage time on third map: " + totalmap / thirdMap.Count);
             Console.WriteLine("Total benchmark time: " + totalTime);
         }

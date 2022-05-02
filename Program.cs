@@ -5,7 +5,7 @@ namespace MainProgram
 {
     class Program
     {
-        static readonly int[] options = { 1, 2 };
+        static readonly int[] options = { 0, 1, 2 };
         static void Main(string[] args)
         {
             int numOfVirtCores = Environment.ProcessorCount;
@@ -16,6 +16,7 @@ namespace MainProgram
                 Console.WriteLine("Which benchmark do you want to perform:");
                 Console.WriteLine("1 - Ternary x Ifelse");
                 Console.WriteLine("2 - A* Pathfinding");
+                Console.WriteLine("0 - Exit");
                 Console.WriteLine("");
                 string input = Console.ReadLine();
                 if (int.TryParse(input, out option))
@@ -41,9 +42,15 @@ namespace MainProgram
                 case 2:
                     Pathfinding.Benchmark(numOfVirtCores);
                     break;
+                case 0:
+                    Console.WriteLine("Exiting..");
+                    System.Environment.Exit(0);
+                    break;
                 default:
                     return;
             }
+            Console.WriteLine("");
+            Console.WriteLine("Enter to exit.");
             Console.ReadLine();
         }
     }

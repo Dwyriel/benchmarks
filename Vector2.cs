@@ -94,7 +94,7 @@ namespace Benchmarks
             {
                 Thread newThread = new Thread(() =>
                 {
-                    Console.WriteLine(Thread.CurrentThread.Name + " starting");
+                    Console.WriteLine(Thread.CurrentThread.Name + " - Starting");
                     Thread.Sleep(1500);
                     Stopwatch s = new Stopwatch();
                     int totalThreadIterations = 0;
@@ -153,20 +153,16 @@ namespace Benchmarks
                     }
                     totalIterations += totalThreadIterations;
                 });
-                newThread.Name = "Thread - " + count;
+                newThread.Name = "Thread " + count;
                 threads.Add(newThread);
-                newThread.Start();
-                Console.WriteLine(newThread.Name + " starting");
             }
             foreach (Thread t in threads)
-            {
+                t.Start();
+            foreach (Thread t in threads)
                 t.Join();
-            }
             BigInteger total = 0;
             foreach (BigInteger value in ternary)
-            {
                 total += value;
-            }
             Console.WriteLine("Ternary avg = " + (total / ternary.Count));
             total = 0;
             foreach (BigInteger value in ifelse)
